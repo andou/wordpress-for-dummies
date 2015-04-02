@@ -41,11 +41,23 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section>
-          <h1>Git</h1>
+          <h1>Git[hub]</h1>
           <h3>For dummies</h3>
           <p>
             <small>Created by <a href="http://github.com/andou">Antonio Pastorino</a> / <a href="mailto:a.pastorino@bitmama.it">a.pastorino@bitmama.it</a></small>
           </p>
+        </section>
+        <section>
+          <section>
+            <h2>Outline</h2>
+          </section>
+          <section>
+            <ul>
+              <li>What are git and github</li>
+              <li>How they work</li>
+              <li>How can I use them</li>
+            </ul>
+          </section>
         </section>
         <section>
           <section>
@@ -442,15 +454,40 @@
           <section>
             <h2>Branch management</h2>
           </section>
+          <section>
+            <h3>Create new branch</h3>
+            <pre>$ git branch iss53</pre>
+            <pre>$ git checkout -b iss53 master</pre>
+          </section>
+          <section>
+            <h3>Switch Branch</h3>
+            <pre>$ git checkout iss53</pre>
+          </section>
+          <section>
+            <h3>Delete Branch</h3>
+            <pre>$ git branch -d iss53</pre>
+          </section>
         </section>
         <section>
           <section>
             <h2>Stashing</h2>
           </section>
+          <section>
+            <p>Move changes to a separate "stash".</p>
+            <pre>$ git stash save<br>$ git stash list<br>$ git stash apply</pre>
+          </section>
         </section>
         <section>
           <section>
             <h2>Workflow</h2>
+          </section>
+          <section>
+            <h3>Progressive stability</h3>
+            <img width="500" data-src="http://git-scm.com/book/en/v2/book/03-git-branching/images/lr-branches-2.png" alt="Progressive Stability">
+          </section>
+          <section>
+            <h3>Topic branches</h3>
+            <img width="500" data-src="http://git-scm.com/book/en/v2/book/03-git-branching/images/topic-branches-1.png" alt="Topic branches">
           </section>
         </section>
         <section>
