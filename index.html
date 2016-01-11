@@ -152,13 +152,6 @@
               <img width="500" data-src="https://www.optimizesmart.com/wp-content/uploads/2012/02/wordpress-site-structure1.jpg" alt="so what?">
             </div>
           </section>
-          <section>
-            <div>
-              <a href="https://developer.wordpress.org/files/2014/10/template-hierarchy.png" target="_blank">
-                <img width="1000" data-src="https://developer.wordpress.org/files/2014/10/template-hierarchy.png" alt="so what?">
-              </a>
-            </div>
-          </section>
         </section>
 
         <!-- installation files -->
@@ -259,37 +252,32 @@
             </p>
           </section>
           <section>
-            <p>
-              WordPress has four built in taxonomies
-            </p>
-          </section>
-          <section>
-            <h3>Category<h3>
+            <h3>Category</h3>
             <p>
               The 'category' taxonomy lets you group posts together by sorting them into various categories. These categories can then be seen on the site by using '/category/name' types of URLs. Categories tend to be pre-defined and broad ranging.
             </p>
           </section>
           <section>
-            <h3>Tag<h3>
+            <h3>Tag</h3>
             <p>
               The 'post_tag' taxonomy is similar to categories, but more free form. Tags can be made up on the fly, by simply typing them in. They can be seen on the site in the '/tag/name' types of URLs. Posts tend to have numerous tags, and they are generally displayed near posts or in the form of tag clouds.
             </p>
           </section>
           <section>
-            <h3>Link category<h3>
+            <h3>Link category</h3>
             <p>
               The 'link_category' taxonomy lets you categorize your links. These tend to be used only internally, for organizational reasons, and are not usually exposed on the site itself. They are handy for defining groups of links to be displayed in sidebars and the like.
             </p>
           </section>
           <section>
-            <h3>Post format<h3>
+            <h3>Post format</h3>
             <p>
               The 'post_format' taxonomy was introduced in WordPress 3.1 and it is a piece of meta information that can be used by a theme to customize its presentation of a post. New post formats can't be created or added to the default existing ones.
             </p>
           </section>
           <section>
             <div>
-              <img width="700" data-src="https://codex.wordpress.org/images/7/75/Z2Ohv.png" alt="so what?">
+              <img width="1500" data-src="https://codex.wordpress.org/images/7/75/Z2Ohv.png" alt="so what?">
             </div>
           </section>
         </section>
@@ -434,10 +422,33 @@
             <h2>Customization - Custom Post Types</h2>
           </section>
           <section>
-            <h3>Define a custom post type</h3>
+            <h3>Default post types</h3>
+            <p>
+              There are five post types that are readily available to users or internally used by the WordPress installation by default :
+            <ul>
+              <li>post</li>
+              <li>page</li>
+              <li>attachment</li>
+              <li>revision</li>
+              <li>navigation menu</li>
+            </ul>
+            </p>
+          </section>
+          <section>
+            <h3>Custom post types</h3>
+            <p>
+              Custom post types are new post types you can create. A custom post type can be added to WordPress via the <em>register_post_type()</em> function. 
+            </p>
+            <p class="fragment">In order to avoid breaking a site on theme switching, try to define custom post types as a plugin</p>
           </section>
           <section>
             <h3>Define custom fields</h3>
+            <p>
+              The best way to define custom fields, associated either to a custom post type or not, is via the aformentioned ACF plugin.
+            </p>
+            <p class="fragment">
+              You can define them from the back-office using a provided GUI or with PHP coding. The latter is the best way.
+            </p>
           </section>
           <section>
             <h3>Anatomy of a custom type: News</h3>
@@ -457,15 +468,12 @@
         <!-- Custom Plugins -->
         <section>
           <section>
-            <h2>Customization - Custom Plugins</h2>
+            <h2>Plugin Customization</h2>
           </section>
           <section>
             <blockquote>
               &ldquo;There are only two hard things in Computer Science: cache invalidation and naming things.&rdquo;
             </blockquote>
-          </section>
-          <section>
-            <h3>Create a custom plugin</h3>
           </section>
           <section>
             <h3>Anatomy of a custom admin plugin: Bitmama Cloner</h3>
@@ -478,7 +486,110 @@
         <!-- Custom Theme -->
         <section>
           <section>
-            <h2>Customization - Custom Theme</h2>
+            <h2>Theme customization - Files</h2>
+          </section>
+          <section>
+            <h3>functions.php</h3>
+            <p>
+              This file is used to add your own custom features to your theme. It works like a plug-in file.
+              Since this file is theme specific, you lose the custom functionality once you change your theme.
+              Not all wordpress themes use this file.
+            </p>
+          </section>
+          <section>
+            <h3>index.php</h3>
+            <p>
+              This template file is used to display the blog post index.
+              The blog post index contains a loop (bunch of PHP code) which displays the most recent blog posts according to some predefined conditions.It displays a list of posts in excerpt or full-length form.
+              The blog post index can be set to display on the front page of your website or on a separate static page.
+            </p>
+          </section>
+          <section>
+            <h3>header.php</h3>
+            <p>
+              This file display headers and navigation.
+              If you want to make changes to the head section then you need to edit this file.
+            </p>
+          </section>
+          <section>
+            <h3>footer.php</h3>
+            <p>
+              Edit this file to change the footer of each web page on your site.
+            </p>
+          </section>
+          <section>
+            <h3>home.php / front-page.php</h3>
+            <p>
+              Most of the times is better to choose a front page with a custom template
+            </p>
+          </section>
+          <section>
+            <h3>page.php</h3>
+            <p>
+              This template file displays page title and its contents.
+            </p>
+          </section>
+          <section>
+            <h3>single.php / single-$posttype.php</h3>
+            <p>
+              This template file displays a single content of a specific type
+            </p>
+          </section>
+          <section>
+            <h3>archive.php / archive-$posttype.php</h3>
+            <p>
+              This template file displays an archive of contents of a specific type
+            </p>
+          </section>
+          <section>
+            <h3>404.php</h3>
+            <p>
+              This template file is used when wordpress cannot find the post or page which is queried.
+              Edit this file if you want to customize your 404 page.
+            </p>
+          </section>
+          <section>
+            <h3>Complete infographic</h3>
+            <div>
+              <a href="https://developer.wordpress.org/files/2014/10/template-hierarchy.png" target="_blank">
+                <img width="1000" data-src="https://developer.wordpress.org/files/2014/10/template-hierarchy.png" alt="so what?">
+              </a>
+            </div>
+          </section>
+        </section>
+
+        <!-- Templates -->
+        <section>
+          <section>
+            <h2>Theme Customization - Custom Page Templates</h2>
+          </section>
+          <section>
+            <p>Page templates are a specific type of template file that can be applied to a specific page or groups of pages</p>
+            <p>Use that to define a specific behaviour / available fields</p>
+          </section>
+        </section>
+
+         <!-- Conditional tags -->
+        <section>
+          <section>
+            <h2>Theme Customization - Conditional tags</h2>
+          </section>
+          <section>
+            <p>Conditional Tags can be used in your Template Files to alter the display of content depending on the conditions that the current page matches.</p>
+            <p class="fragment">A humble note: use these in your template files as a last chance, because there is plenty of other ways to avoid their usage. </p>
+          </section>
+        </section>
+
+        <!-- Theme customization in practice -->
+        <section>
+          <section>
+            <h2>Theme Customization - In practice</h2>
+          </section>
+          <section>
+            <h3>Anatomy of a custom theme: Napapijri</h3>
+            <div>
+              <img width="600" data-src="http://bitmama2011.s3.amazonaws.com/wordpress/images/theme.png" alt="so what?">
+            </div>
           </section>
         </section>
 
@@ -512,9 +623,9 @@
         <section style="text-align: left;">
           <h1>THE END</h1>
           <p>
-            - <a href="http://goo.gl/sE1Jer">Link to this presentation</a> <br>
+            - <a href="http://goo.gl/YkiYxX">Link to this presentation</a> <br>
             - <a href="https://github.com/andou/wordpress-for-dummies">Source code of this presentation</a>
-            - More on this series: <a href="https://github.com/andou/github-for-dummies">Github for dummies</a>
+            - More on this series: <a href="http://goo.gl/sE1Jer">Github for dummies</a>
           </p>
         </section>
         <section>
@@ -534,7 +645,7 @@
           </div>
           <h5>Attribution</h5>
           <ul>
-            <li>I took great inspiration from:&nbsp;<a href="https://www.optimizesmart.com/wordpress-ninja-15-minutes/" class="roll"><span data-title="http://git-scm.com/book">https://www.optimizesmart.com/wordpress-ninja-15-minutes/</span></a> whose author is <a href="https://www.optimizesmart.com/contact/">Himanshu Sharma</a></li>
+            <li>I took great inspiration from:&nbsp;<a href="https://www.optimizesmart.com/wordpress-ninja-15-minutes/" class="roll"><span>https://www.optimizesmart.com/wordpress-ninja-15-minutes/</span></a> whose author is <a href="https://www.optimizesmart.com/contact/">Himanshu Sharma</a></li>
           </ul>
         </section>
 
