@@ -4,9 +4,9 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Git[hub] - for dummies</title>
+    <title>WordPress - for dummies</title>
 
-    <meta name="description" content="A quick introduction to github and gitflows in Italian">
+    <meta name="description" content="A quick introduction to WordPress">
     <meta name="author" content="Antonio Pastorino">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -40,492 +40,472 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
+        
+        <!-- Cover -->
         <section>
-          <h1>Git[hub]</h1>
+          <h1>WordPress</h1>
           <h3>For dummies</h3>
           <p>
             <small>Created by <a href="http://github.com/andou">Antonio Pastorino</a> / <a href="mailto:a.pastorino@bitmama.it">a.pastorino@bitmama.it</a></small>
           </p>
         </section>
+
+        <!-- outline -->
         <section>
           <section>
             <h2>Outline</h2>
           </section>
           <section>
             <ul>
-              <li>What are git and github</li>
-              <li>How they work</li>
-              <li>How can I use them</li>
+              <li>What is WordPress</li>
+              <li>Architecture</li>
+              <li>3rd Party Plugins</li>
+              <li>Weapons</li>
+              <li>Customization</li>
             </ul>
           </section>
         </section>
+
+        <!-- definitions -->
         <section>
           <section>
             <h2>Definitions</h2>
           </section>
           <section>
-            <blockquote cite="http://en.wikipedia.org/wiki/Git_(software)">
-              &ldquo;Git (/ɡɪt/) is a <strong>distributed revision control system</strong> with an emphasis on speed, data integrity, and support for distributed, non-linear workflows.&rdquo;
+            <blockquote cite="https://en.wikipedia.org/wiki/WordPress">
+              &ldquo;WordPress is a free and open-source <strong>content management system (CMS)</strong> based on PHP and MySQL. [...] It has a <strong>web template system</strong> using a <strong>template processor</strong>.&rdquo;
             </blockquote>
           </section>
           <section>
             <div>
-              <img width="500" data-src="http://static.guim.co.uk/sys-images/Guardian/About/General/2010/10/20/1287571854392/Homer-Simpson-006.jpg" alt="so what?">
+              <img width="500" data-src="http://1.bp.blogspot.com/-mZ4t4b_FhxM/UuDBzSGQk7I/AAAAAAAACxE/L3XfTOV1O3k/s1600/skotan_Thumbs_up_smiley.png" alt="so what?">
             </div>
             <p>
-              so what??
+              Got it?
             </p>
           </section>
           <section>
-            <blockquote cite="http://en.wikipedia.org/wiki/Revision_control">
-              &ldquo;<strong>Revision control</strong>, also known as version control and source control, is the management of changes to documents, computer programs, large web sites, and other collections of information.&rdquo;
+            <blockquote cite="https://en.wikipedia.org/wiki/Content_management_system">
+              &ldquo;<strong>A content management system (CMS)</strong> is a computer application that allows publishing, editing, modifying, organizing, deleting, and maintaining content from a central interface.&rdquo;
+            </blockquote>
+          </section>
+          <section>
+            <blockquote cite="https://en.wikipedia.org/wiki/Web_template_system">
+              &ldquo;<strong>A web template system</strong> uses a template processor to combine web templates to form finished web pages, possibly using some data source to customize the pages or present a large amount of content on similar-looking pages. &rdquo;
+            </blockquote>
+          </section>
+          <section>
+            <blockquote cite="https://en.wikipedia.org/wiki/Template_processor">
+              &ldquo;<strong>A template processor</strong> is software designed to combine one or more templates with a data model to produce one or more result documents. The language that the templates are written in is known as a <strong>template language</strong>.&rdquo;
             </blockquote>
             <p class="fragment">
-              clear, uh?
+              PHP is a template language
             </p>
           </section>
         </section>
+
+        <!-- survey -->
         <section>
           <section>
             <h2>Survey</h2>
           </section>
           <section>
-            <p>Who already knows Git?</p>
+            <p>Who already knows WordPress?</p>
           </section>
           <section>
             <p>Who knows any of these?</p>
             <ul>
-              <li>SVN</li>
-              <li>CVS</li>
-              <li>Mercurial</li>
+              <li>Drupal</li>
+              <li>Joomla!</li>
+              <li>TYPO3</li>
             </ul>
           </section>
         </section>
 
+        <!-- themes -->
         <section>
           <section>
-            <h2>Why should I use version control?</h2>
+            <h2>Architecture - Themes</h2>
           </section>
           <section>
-            <blockquote cite="https://www.youtube.com/watch?v=0aRtupiY9Dw">
-              &ldquo;An elegant weapon for a more civilized age.&rdquo;
-            </blockquote>
-          </section>
-          <section>
-            <h3>Look, it's not useful if I</h3>
-            <ul>
-              <li>Do not have other people working on the code.</li>
-              <li>Do not plan on letting others have the code.</li>
-              <li class="fragment">Isn't it an overhead?</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Well, have you ever</h3>
-            <ul>
-              <li>made a change to code, realised it was a mistake and wanted to revert back?</li>
-              <li>lost code or had a backup that was too old?</li>
-              <li>had to maintain multiple versions of a product?</li>
-            </ul>
-          </section>
-          <section>
-            <h3>And if you wonder to</h3>
-            <ul>
-              <li>see the difference between two (or more) versions of your code?</li>
-              <li>prove that a particular change broke or fixed a piece of code?</li>
-              <li>review the history of some code?</li>
-            </ul>	
-          </section>
-          <section>
-            <h3>Or even</h3>
-            <ul>
-              <li>submit a change to someone else's code?</li>
-              <li>share your code, or let other people work on your code?</li>
-              <li>see how much work is being done, and where, when and by whom?</li>
-            </ul>
-          </section>
-          <section>
-            <h3>And, last but not least</h3>
-            <ul>
-              <li>wanted to experiment with a new feature without interfering with working code?</li>
-            </ul>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>Version control systems</h2>
-          </section>
-          <section>
-            <h3>Local</h3>
-            <div>
-              <img width="500" data-src="http://git-scm.com/book/en/v2/book/01-introduction/images/local.png" alt="Local VCS">
-            </div>
-          </section>
-          <section>
-            <h3>Centralized</h3>
-            <div>
-              <img width="500" data-src="http://www.devopsservice.com/wp-content/uploads/2015/05/Centralized-VCS1.png" alt="Centralized VCS">
-            </div>
-          </section>
-          <section>
-            <h3>Distributed</h3>
-            <div>
-              <img width="500" data-src="http://git-scm.com/book/en/v2/book/01-introduction/images/distributed.png" alt="Distributed VCS">
-            </div>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>About Git</h2>
-          </section>
-          <section>
-            <h3>Desing Goals</h3>
-            <ul>
-              <li>Speed</li>
-              <li>Simple Design</li>
-              <li>Strong support for thousands of parallel branches<l/i>
-                <li>Fully distributed </li>
-                <li>Able to handle larges projects like Linux kernel effectively </li>
-                <li>Ensure integrity </li>
-            </ul>
-          </section>
-          <section>
-            <h3>Git is a filesystem</h3>
-            <blockquote>Git thinks of its data more like a set of snapshots of a mini filesystem.</blockquote>
-          </section>
-          <section>
-            <h3>Git has integrity</h3>
-            <ul>
-              <li>Everything is checksummed</li>
-              <li>References are SHA-1</li>
-            </ul>
-            <br/>
+            <h3>Understanding the WordPress Site Architecture</h3>
+            <p class="">
+              A wordpress theme is made up of: template files, style sheet files, JavaScript files, Image files and some other files like functions.php.
+            </p>
             <p class="fragment">
-              986da33f0edea8f13b8dee427262ffd1bce0a4c4
+              All the wordpress themes’ files live in the folder: /wp-content/themes/
             </p>
           </section>
           <section>
-            <h3>Git doesn't delete</h3>
-            <ul>
-              <li>generally only adds data </li>
-              <li>if you mess up, you can usually recover your stuff </li>
-              <li>not for everyone, though</li>
-            </ul>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>Git states &amp; workflow</h2>
-          </section>
-          <section>
-            <h3>Three states</h3>
-            <ul>
-              <li>Modified</li>
-              <li>Staged</li>
-              <li>Committed</li>
-              <li class="fragment roll-in">Pushed?</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Workflow</h3>
-            <div>
-              <img width="500" data-src="http://git-scm.com/figures/18333fig0106-tn.png" alt="workflow">
-            </div>
-          </section>
-          <section>
-            <h3>File status lifecycle</h3>
-            <div>
-              <img width="500" data-src="http://git-scm.com/figures/18333fig0201-tn.png" alt="lifecycle">
-            </div>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>About Github</h2>
+            <p>
+              Template files are PHP files (.php) which are used to generate web pages and which makes customization possible in wordpress.
+            </p>
+            <p class="fragment">
+              Some template files are used on all the web pages (like header and footer template files), while others are used only under specific conditions.
+            </p>
+            <p class="fragment">
+              WordPress decides which template files to load when, according to the template hierarchy rules.
+            </p>
           </section>
           <section>
             <div>
-              <img width="200" data-src="http://i1-news.softpedia-static.com/images/news2/Twitter-s-Original-Logo-Designer-Only-Made-3-from-It-2.jpg" alt="Octocat">
+              <img width="500" data-src="https://www.optimizesmart.com/wp-content/uploads/2012/02/wordpress-site-structure1.jpg" alt="so what?">
             </div>
-            <ul>
-              <li>web-based Git repository hosting service</li>
-              <li>offers all of the distributed SCM functionalities of Git</li>
-              <li>adds new features</li>
-            </ul>
           </section>
           <section>
-            <h3>New features</h3>
-            <ul>
-              <li>web-based graphical interface</li>
-              <li>desktop &amp; mobile integration</li>
-              <li>access control</li>
-              <li>pull requests</li>
-              <li class="fragment">and more (wikis, task management, bug tracking, etc.)</li>
-            </ul>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>Installing Git</h2>
-          </section>
-          <section>
-            <h3>Windows</h3>
-            <p>msysgit: <a href="https://msysgit.github.io/">https://msysgit.github.io/</a></p>
-          </section>
-          <section>
-            <h3>Linux</h3>
-            <p style="text-align: left;">Debian <pre>$ aptitude install git</pre></p>
-            <p style="text-align: left;">Ubuntu <pre>$ apt-get install git</pre></p>
-            <p style="text-align: left;">Centos <pre>$ yum install git</pre></p>
-            <p style="text-align: left;">Arch <pre>$ pacman -S git</pre></p>
-          </section>
-
-          <section>
-            <h3>OS X</h3>
-            <p><pre>$ brew install git</pre></p>
-            <p class="fragment" style="text-align: left;">Also developer tools should be ok...</p>
+            <div>
+              <a href="https://developer.wordpress.org/files/2014/10/template-hierarchy.png" target="_blank">
+                <img width="1000" data-src="https://developer.wordpress.org/files/2014/10/template-hierarchy.png" alt="so what?">
+              </a>
+            </div>
           </section>
         </section>
 
-        <!-- Configuring Git -->
+        <!-- installation files -->
         <section>
           <section>
-            <h2>Configuring Git</h2>
+            <h2>Architecture - Installation files & Folders</h2>
           </section>
           <section>
-            <h3>Identity</h3>
-            <pre>$ git config --global user.name "Peter Parker"<br>$ git config --global user.email peterparker@bitmama.it</pre>
+            <h3>/wp-content/</h3>
+            <p class="">
+              This folder contains all of your plug-ins and themes. It also contains all of your blog posts and comments (in the ‘cache’ sub-folder). So if you want to take a back up of your wordpress site then first take a back up of this folder.
+            </p>
           </section>
           <section>
-            <h3>Editor</h3>
-            <pre>$ git config --global core.editor nano</pre>
+            <h3>/wp-config.php</h3>
+            <p class="">
+              This file stores your wordpress database information like database name, database username, database password etc. It is a very important file and can easily take down your website. So don’t mess with it unless you know what you are doing.
+            </p>
           </section>
           <section>
-            <h3>Colors</h3>
-            <pre>$ git config --global color.ui true</pre>
-          </section>
-          <section>
-            <p>Configurations are in ~/.gitconfig</p>
-          </section>	
-        </section>
-
-        <!-- Using Github -->
-        <section>
-          <section>
-            <h2>Using Github</h2>
-          </section>
-          <section>
-            <h3>Join github</h3>
-            <p><a href="https://github.com/join">https://github.com/join</a></p>
-          </section>
-          <section>
-            <h3>Private/Public Key</h3>
-            <p style="text-align: left;">SSH keys are a way to identify trusted computers, without involving passwords.</p>
-            <p><a href="https://help.github.com/articles/generating-ssh-keys/">https://help.github.com/articles/generating-ssh-keys/</a></p>
-          </section>
-        </section>
-        <!-- Starting with Git -->
-        <section>
-          <section>
-            <h2>Starting with Git</h2>
-          </section>
-          <section>
-            <h3>Initizialize your project</h3>
-            <pre>$ git init</pre>
-          </section>
-          <section>
-            <h3>Or clone it</h3>
-            <pre>$ git clone https://github.com/andou/github-for-dummies.git</pre>
-          </section>
-          <section>
-            <h3>What's up?</h3>
-            <pre>$ git status</pre>
-          </section>
-          <section>
-            <h3>Decide what is relevant</h3>
-            <pre>$ git add file1 file2 ...<br/>$ git commit</pre>
-          </section>
-          <section>
-            <h3>What did I just modify</h3>
-            <pre>$ git diff</pre>
-          </section>
-          <section>
-            <h3>What happened?</h3>
-            <pre>$ git log</pre>
-          </section>
-          <section>
-            <h3>I've screwed everything up....</h3>
-            <pre>$ git reset</pre>
+            <h3>/.htaccess</h3>
+            <p class="">
+              Another important file for server access control. You can find this file in the root folder via your FTP. It is a very important file and can easily take down your website. So don’t mess with it unless you know what you are doing.
+            </p>
           </section>
         </section>
 
-        <!-- .gitignore -->
+        <!-- Plugins -->
         <section>
           <section>
-            <h2>.gitignore</h2>
+            <h2>Architecture - Plugins</h2>
           </section>
           <section>
-            <h3>sample</h3>
-            <pre>.DS_Store<br/>*.log<br/>/build/<br/>/doc/[abc]*.txt<br/>.sass-cache
-            </pre>
-          </section>	
-          <section>
-            <ul>
-              <li>Blank lines or lines starting with # are ignored</li>
-              <li>End pattern with slash (/) to specify a directory</li>
-              <li>Negate pattern with exclamation point (!) </li>
-            </ul>
-          </section>	
-        </section>	
-
-        <!-- Remotes -->
-        <section>
-          <section>
-            <h2>Remotes</h2>
+            <h3>Plugin</h3>
+            <p class="">
+              A WordPress Plugin is a program, or a set of one or more functions, written in the PHP scripting language, that adds a specific set of features or services to the WordPress weblog, which can be seamlessly integrated with the weblog using access points and methods provided by the WordPress Plugin Application Program Interface (API).
+            </p>
           </section>
           <section>
-            <ul>
-              <li>Other clones of the same repo</li>
-              <li>Can be more than one</li>
-              <li>There are default remotes for push and pull</li>
-              <li class="fragment roll-in">Github is a remote</li>
-            </ul>
+            <h3>Hooks - Actions</h3>
+            <p class="">
+              An Action is a PHP function that is triggered by specific events that take place in WordPress. An Action is a custom PHP function defined in your plugin (or theme) and hooked, i.e. set to respond, to some of these events.
+            </p>
+            <p class="fragment">
+              You can define your own plugin Actions to make other plugins interact with your code.
+            </p>
           </section>
           <section>
-            <pre>$ git remote -v<br>origin	https://github.com/andou/github-for-dummies.git (fetch)<br>origin	https://github.com/andou/github-for-dummies.git (push)</pre>
-          </section>
-          <section>
-            <h3>Push to remote</h3>
-            <pre>$ git push &lt;remote&gt;  &lt;branch&gt;</pre>
-          </section>
-          <section>
-            <h3>Pull from remote</h3>
-            <pre>$ git pull &lt;remote&gt;  &lt;branch&gt;</pre>
+            <h3>Hooks - Filters</h3>
+            <p class="">
+              A Filter is a function that is associated with an existing Action by specifying any existing Hook. These are functions that WordPress passes data through, at certain points in execution, just before taking some action with the data .
+            </p>
+            <p class="fragment">
+              You can define your own plugin Filters to make other plugins interact with your code.
+            </p>
           </section>
         </section>
 
-        <!-- Tags -->
+        <!-- Pages and Posts -->
         <section>
           <section>
-            <h2>Tags</h2>
+            <h2>Architecture - Pages and Posts</h2>
           </section>
           <section>
-            <ul>
-              <li>specify important points in history</li>
-              <li>tipically release points</li>
-            </ul>
+            <h3>Pages</h3>
+            <p>
+              Pages are static and are not listed by date. That means that the information displayed on a page doesn’t change, or doesn’t change often. A great example of a page would be the About or Contact Us section of a website.
+              Pages do not use tags or categories. 
+            </p>
           </section>
           <section>
-            <h3>Lightweight tags</h3>
-            <pre>$ git tag v0.0.1</pre>
+            <p>
+              By default the front page of a WordPress site will display post blog.
+              You can either choose a page as front page
+            </p>
           </section>
           <section>
-            <h3>Annotated tags</h3>
-            <pre>$ git tag -a v0.0.1 -m 'this is my tag'</pre>
+            <p>
+              Pages can be organized in a sub-pages/ hierarcical structure.
+            </p>
+            <p>
+              Pages can have specific templates.
+            </p>
+          </section>
+        </section>
+        
+        <!-- Taxonomy -->
+        <section>
+          <section>
+            <h2>Architecture - Taxonomy</h2>
+          </section>
+          <section>
+            <p>
+              In WordPress, a "taxonomy" is a grouping mechanism for some posts (or links or custom post types).
+            </p>            
+            <p>
+              WordPress has four built in taxonomies
+            </p>
+          </section>
+          <section>
+            <p>
+              WordPress has four built in taxonomies
+            </p>
+          </section>
+          <section>
+            <h3>Category<h3>
+            <p>
+              The 'category' taxonomy lets you group posts together by sorting them into various categories. These categories can then be seen on the site by using '/category/name' types of URLs. Categories tend to be pre-defined and broad ranging.
+            </p>
+          </section>
+          <section>
+            <h3>Tag<h3>
+            <p>
+              The 'post_tag' taxonomy is similar to categories, but more free form. Tags can be made up on the fly, by simply typing them in. They can be seen on the site in the '/tag/name' types of URLs. Posts tend to have numerous tags, and they are generally displayed near posts or in the form of tag clouds.
+            </p>
+          </section>
+          <section>
+            <h3>Link category<h3>
+            <p>
+              The 'link_category' taxonomy lets you categorize your links. These tend to be used only internally, for organizational reasons, and are not usually exposed on the site itself. They are handy for defining groups of links to be displayed in sidebars and the like.
+            </p>
+          </section>
+          <section>
+            <h3>Post format<h3>
+            <p>
+              The 'post_format' taxonomy was introduced in WordPress 3.1 and it is a piece of meta information that can be used by a theme to customize its presentation of a post. New post formats can't be created or added to the default existing ones.
+            </p>
+          </section>
+          <section>
+            <div>
+              <img width="700" data-src="https://codex.wordpress.org/images/7/75/Z2Ohv.png" alt="so what?">
+            </div>
           </section>
         </section>
 
-        <!-- Branches -->
+        <!-- 3rd party plugins -->
         <section>
           <section>
-            <h2>Branches</h2>
+            <h2>3rd Party Plugins</h2>
           </section>
           <section>
-            <ul>
-              <li>are "pointers" to commit</li>
-              <li>identify streams of development</li>
-              <li>they can diverge from each other</li>
-              <li>they can be merged</li>
-            </ul>
+            <h3>An humble note on 3rd party plugins</h3>
+            <p class="">
+              It is quite difficult to find a plugin that fit with your custom business logic. Unless we are talking of very abstract features it is often better to write you own plugin.
+            </p>
+            <p class="fragment">
+              But there still are some valuable plugins to use
+            </p>
           </section>
           <section>
-            <h3>Diverging branches</h3>
-            <img width="500" data-src="http://git-scm.com/book/en/v2/book/03-git-branching/images/basic-branching-6.png" alt="Diverging Branches">
+            <h3>Multilanguage</h3>
+            <p>
+              <a href="https://wpml.org/it/" target="_blank">WPML</a>
+            </p>
           </section>
           <section>
-            <h3>Merged branches</h3>
-            <img width="500" data-src="http://git-scm.com/book/en/v2/book/03-git-branching/images/basic-merging-2.png" alt="Merged Branches">
+            <h3>SEO</h3>
+            <p>
+              <a href="https://it.wordpress.org/plugins/wordpress-seo/" target="_blank">YOAST</a>
+            </p>
           </section>
           <section>
-            <h3>Merging</h3>
-            <ul>
-              <li>There are different auto-merge strategies</li>
-              <li>If it fails, you'll have to fix by hand</li>
-              <li>Mark conflicts as resolved and trigger a merge commit</li>
-            </ul>
+            <h3>Contact & CRM</h3>
+            <p>
+              <a href="https://wordpress.org/plugins/contact-form-7/" target="_blank">Contact Form 7</a>
+            </p>
+            <p>
+              <a href="https://it.wordpress.org/plugins/flamingo/" target="_blank">Flamingo</a>
+            </p>
+          </section>
+          <section>
+            <h3>Custom Fields</h3>
+            <p>
+              <a href="http://www.advancedcustomfields.com/" target="_blank">Advanced Custom Fields</a>
+            </p>
+            <p>
+              <a href="http://www.advancedcustomfields.com/resources/repeater/" target="_blank">Advanced Custom Fields - Repeater</a>
+            </p>
+          </section>
+          <section>
+            <h3>Cache</h3>
+            <p>
+              <a href="https://wordpress.org/plugins/w3-total-cache/" target="_blank">W3TC</a>
+            </p>
+            <p>
+              <a href="https://it.wordpress.org/plugins/wp-super-cache/" target="_blank">WP Super Cache</a>
+            </p>
+          </section>
+          <section>
+            <h3>Media Library</h3>
+            <p>
+              <a href="https://wordpress.org/plugins/enhanced-media-library/" target="_blank">Enhanced Media Library</a>
+            </p>
+          </section>
+          <section>
+            <h3>Content Deployment</h3>
+            <p>
+              <a href="https://shop.crowdfavorite.com/ramp/" target="_blank">RAMP</a>
+            </p>
+          </section>
+          <section>
+            <h3>Users and roles</h3>
+            <p>
+              <a href="https://it.wordpress.org/plugins/adminimize/" target="_blank">Adminimize</a>
+            </p>
           </section>
         </section>
+
+        <!-- Weapons -->
         <section>
           <section>
-            <h2>Branch management</h2>
+            <h2>Weapons</h2>
           </section>
           <section>
-            <h3>Create new branch</h3>
-            <pre>$ git branch iss53</pre>
-            <pre>$ git checkout -b iss53 master</pre>
+            <h3>Coding IDE</h3>
+            <p>
+              <a href="https://netbeans.org/" target="_blank">Netbeans</a>
+            </p>
           </section>
           <section>
-            <h3>Switch Branch</h3>
-            <pre>$ git checkout iss53</pre>
+            <h3>Database Administration</h3>
+            <p>
+              <a href="https://www.mysql.it/products/workbench/" target="_blank">MySQL Workbench</a>
+            </p>
           </section>
           <section>
-            <h3>Delete Branch</h3>
-            <pre>$ git branch -d iss53</pre>
+            <h3>Dependency Management</h3>
+            <p>
+              <a href="https://getcomposer.org/" target="_blank">Composer</a>
+            </p>
+          </section>
+          <section>
+            <h3>Debugging</h3>
+            <p>
+              <a href="http://xdebug.org/" target="_blank">Xdebug</a>
+            </p>
+          </section>
+          <section>
+            <h3>Testing</h3>
+            <p>
+              <a href="https://phpunit.de/" target="_blank">PHPUnit</a>
+            </p>
+          </section>
+          <section>
+            <h3>Version Control System</h3>
+            <p>
+              <a href="https://git-scm.com/" target="_blank">Git</a>
+            </p>
+            <p>
+              <a href="https://github.com/" target="_blank">GitHub</a>
+            </p>
+          </section>
+          <section>
+            <h3>Virtual Machine</h3>
+            <p>
+              <a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a>
+            </p>
+            <p>
+              <a href="https://www.vagrantup.com/" target="_blank">Vagrant</a>
+            </p>
+            <p>
+              <a href="https://puppetlabs.com/" target="_blank">Puppet</a>
+            </p>
+            <p class="fragment">
+              Interested? Check <a href="https://github.com/andou/wp-bare-minimum" target="_blank">this</a> out!
+            </p>
           </section>
         </section>
+
+        <!-- Custom Post Types -->
         <section>
           <section>
-            <h2>Stashing</h2>
+            <h2>Customization - Custom Post Types</h2>
           </section>
           <section>
-            <p>Move changes to a separate "stash".</p>
-            <pre>$ git stash save<br>$ git stash list<br>$ git stash apply</pre>
+            <h3>Define a custom post type</h3>
           </section>
+          <section>
+            <h3>Define custom fields</h3>
+          </section>
+          <section>
+            <h3>Anatomy of a custom type: News</h3>
+            <div>
+              <img width="600" data-src="http://bitmama2011.s3.amazonaws.com/wordpress/images/news.png" alt="so what?">
+            </div>
+          </section>
+          <section>
+            <h3>Speeding up the process: FastAcf</h3>
+            <div>
+              <img width="600" data-src="http://bitmama2011.s3.amazonaws.com/wordpress/images/fastacf.png" alt="so what?">
+            </div>
+          </section>
+          
         </section>
+
+        <!-- Custom Plugins -->
         <section>
           <section>
-            <h2>Workflow</h2>
+            <h2>Customization - Custom Plugins</h2>
           </section>
           <section>
-            <h3>Progressive stability</h3>
-            <img width="500" data-src="http://git-scm.com/book/en/v2/book/03-git-branching/images/lr-branches-2.png" alt="Progressive Stability">
+            <blockquote>
+              &ldquo;There are only two hard things in Computer Science: cache invalidation and naming things.&rdquo;
+            </blockquote>
           </section>
           <section>
-            <h3>Topic branches</h3>
-            <img width="500" data-src="http://git-scm.com/book/en/v2/book/03-git-branching/images/topic-branches-1.png" alt="Topic branches">
+            <h3>Create a custom plugin</h3>
+          </section>
+          <section>
+            <h3>Anatomy of a custom admin plugin: Bitmama Cloner</h3>
+            <div>
+              <img width="600" data-src="http://bitmama2011.s3.amazonaws.com/wordpress/images/cloner.png" alt="so what?">
+            </div>
           </section>
         </section>
+
+        <!-- Custom Theme -->
+        <section>
+          <section>
+            <h2>Customization - Custom Theme</h2>
+          </section>
+        </section>
+
+        <!-- References -->
         <section>
           <section>
             <h2>References</h2>
             <ul>
-              <li>Git: <a href="http://git-scm.com/">http://git-scm.com/</a></li>
-              <li>Github: <a href="https://github.com/">https://github.com/</a></li>
-              <li>Try git: <a href="http://try.github.com/">http://try.github.com/</a></li>
+              <li>WordPress: <a href="https://wordpress.org/">https://wordpress.org/</a></li>
+              <li>WordPress Codex: <a href="https://codex.wordpress.org/">https://codex.wordpress.org/</a></li>
+              <li>WordPress Plugin: <a href="https://wordpress.org/plugins/">https://wordpress.org/plugins/</a></li>
             </ul>
           </section>
           <section>
             <h2>More references</h2>
             <ul>
-              <li><a href="http://www.git-tower.com/blog/git-cheat-sheet/">CheatSheet</a></li>
-              <li><a href="https://gist.github.com/andou/0aaae87ef476e4d7a77d">My shortcodes</a></li>
+              <li><a href="https://codex.wordpress.org/Writing_a_Plugin">Writing a custom plugin</a></li>
+              <li><a href="https://codex.wordpress.org/Plugin_API">Plugin API</a></li>
+              <li><a href="http://codex.wordpress.org/Post_Types#Custom_Post_Types">Custom Post Types</a></li>
             </ul>
           </section>
           <section>
             <h2>Some more...</h2>
             <ul>
-              <li>Book [for pro]: <a href="http://git-scm.com/book/en/v2">http://git-scm.com/book/en/v2</a></li>
-              <li>Git Docs: <a href="http://git-scm.com/docs">http://git-scm.com/docs</a></li>
-              <li><a href="https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html">Deep tutorial</a></li>
+              <li><a href="https://roots.io/using-composer-with-wordpress/">Using WordPress with composer</a></li>
+              <li><a href="https://github.com/andou/wp-bare-minimum">WordPress bare minimum environment</a></li>
             </ul>
-          </section>
-          <section>
-            <h2>Not enough??</h2>
-            <ul>
-              <li><a href="https://www.youtube.com/watch?v=4XpnKHJAok8">Y U no ask Linus Torvalds?</a></li>
-            </ul>
-            <div>
-              <img width="250" data-src="https://pbs.twimg.com/profile_images/1240974873/Untitled_1.png" alt="Y U NO!?">
-            </div>
           </section>
         </section>
 
@@ -533,7 +513,8 @@
           <h1>THE END</h1>
           <p>
             - <a href="http://goo.gl/sE1Jer">Link to this presentation</a> <br>
-            - <a href="https://github.com/andou/github-for-dummies">Source code of this presentation</a>
+            - <a href="https://github.com/andou/wordpress-for-dummies">Source code of this presentation</a>
+            - More on this series: <a href="https://github.com/andou/github-for-dummies">Github for dummies</a>
           </p>
         </section>
         <section>
@@ -553,9 +534,7 @@
           </div>
           <h5>Attribution</h5>
           <ul>
-            <li>Most illustrations:&nbsp;<a href="http://git-scm.com/book" class="roll"><span data-title="http://git-scm.com/book">http://git-scm.com/book</span></a></li>
-
-            <li>Some slides are shamelessly taken from:&nbsp;<a href="https://dbrgn.ch/slides/20130207_getting_git" class="roll"><span data-title="http://git-scm.com/book">https://dbrgn.ch/slides/20130207_getting_git</span></a> whose author is <a href="https://dbrgn.ch/">Danilo Bargen</a></li>
+            <li>I took great inspiration from:&nbsp;<a href="https://www.optimizesmart.com/wordpress-ninja-15-minutes/" class="roll"><span data-title="http://git-scm.com/book">https://www.optimizesmart.com/wordpress-ninja-15-minutes/</span></a> whose author is <a href="https://www.optimizesmart.com/contact/">Himanshu Sharma</a></li>
           </ul>
         </section>
 
